@@ -1,0 +1,15 @@
+[package]
+name = "tic-tac-toe-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Dani Sancas"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+colored = "2"
+
+[profile.release]
+opt-level = "z"  # Enable full optimization and link statically
+strip = true  # Automatically strip symbols from the binary.
+lto = true  # Enable link-time optimization.
